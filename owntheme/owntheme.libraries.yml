@@ -1,0 +1,21 @@
+global-scripts:
+  version: 1.2.3
+  license:
+    name: MIT
+    url: https://github.com/w3co/jcf/blob/master/LICENSE.txt
+    gpl-compatible: true
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/jcf/1.2.3/js/jcf.js: { type: external }
+global-styling:
+  version: 1.2.3
+  license:
+    name: MIT
+    url: https://github.com/w3co/jcf/blob/master/LICENSE.txt
+    gpl-compatible: true
+  css:
+    theme:
+      https://cdnjs.cloudflare.com/ajax/libs/jcf/1.2.3/css/theme-minimal/jcf.css: { type: external, minified: true }
+maintenance-own-css:
+  css:
+    theme:
+      css/maintenance-page.css: {}

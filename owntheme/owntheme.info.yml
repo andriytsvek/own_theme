@@ -1,0 +1,21 @@
+name: Own Theme
+type: theme
+description: 'Own theme that based on Bartik.'
+core: 8.x
+base theme: bartik
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  content: Content
+  footer: Footer
+libraries:
+  - owntheme/global-scripts
+  - owntheme/global-styling
+  - owntheme/maintenance-own-css
+libraries-override:
+  bartik/maintenance_page:
+    css:
+      theme:
+        css/maintenance-page.css: false

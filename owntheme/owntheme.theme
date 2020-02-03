@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Functions to extend Bartik theme.
+ */
+
+function owntheme_preprocess_maintenance_page(&$variables) {
+  $variables['#attached']['library'][] = 'owntheme/maintenance-page';
+}
+
+function owntheme_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  $ct = \Drupal::routeMatch()->getParameter('node');
+
+  if ($ct instanceof \Drupal\Core\Entity\ContentEntityInterface) {
+    $value = $ct->get('field_template')->value;
+
+    if ($value == 'faq') $suggestions[] = 'node__page__' . 'faq';
+    if ($value == 'sitemap') $suggestions[] = 'node__page__' . 'sitemap';
+  }
+
+  //$node = Drupal::request()->attributes->get("node");
+}
